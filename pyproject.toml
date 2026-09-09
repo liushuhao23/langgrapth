@@ -1,0 +1,25 @@
+[project]
+name = "langgrath"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "liushuhao", email = "liushuhao@ysstech.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "langchain>=0.3.30",
+    "langchain-deepseek>=0.1.4",
+    "langgraph>=0.6.11",
+    "langgraph-checkpoint-postgres==3.0.5",
+    "loguru>=0.7.3",
+    "psycopg[binary]>=3.3.5",
+    "pydantic>=2.13.4",
+]
+
+[project.scripts]
+langgrath = "langgrath:main"
+
+[build-system]
+requires = ["uv_build>=0.12.5,<0.13.0"]
+build-backend = "uv_build"
